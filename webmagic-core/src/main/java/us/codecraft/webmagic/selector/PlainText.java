@@ -1,5 +1,8 @@
 package us.codecraft.webmagic.selector;
 
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,6 +62,11 @@ public class PlainText extends AbstractSelectable {
             nodes.add(PlainText.create(string));
         }
         return nodes;
+    }
+
+    @Override
+    public Elements getAllElements() {
+        throw new UnsupportedOperationException("getAllElements can not apply to plain text.");
     }
 
     @Override

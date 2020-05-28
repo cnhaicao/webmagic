@@ -3,6 +3,7 @@ package us.codecraft.webmagic.selector;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -81,6 +82,11 @@ public class Html extends HtmlNode {
         } else {
             return selector.selectList(getFirstSourceText());
         }
+    }
+
+    @Override
+    public Elements getAllElements() {
+        return document.getAllElements();
     }
 
     public static Html create(String text) {

@@ -19,7 +19,7 @@ public interface ElementSelector {
      * @param element element
      * @return result
      */
-    public String select(Element element);
+    String select(Element element);
 
     /**
      * Extract all results in text.<br>
@@ -27,6 +27,6 @@ public interface ElementSelector {
      * @param element element
      * @return results
      */
-    public List<String> selectList(Element element);
+    List<String> selectList(Element element);
 
 }

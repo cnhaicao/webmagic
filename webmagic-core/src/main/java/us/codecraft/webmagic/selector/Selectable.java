@@ -1,5 +1,8 @@
 package us.codecraft.webmagic.selector;
 
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.util.List;
 
 /**
@@ -149,4 +152,11 @@ public interface Selectable {
      * @return result
      */
     public List<Selectable> nodes();
+
+    /**
+     * get all element of current node.
+     * @return Elements
+     */
+    Elements getAllElements();
+
 }

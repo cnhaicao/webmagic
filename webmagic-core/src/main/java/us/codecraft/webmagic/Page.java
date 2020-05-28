@@ -28,9 +28,14 @@ import java.util.Map;
  * @since 0.1.0
  */
 public class Page {
-
+    /**
+     * request
+     */
     private Request request;
 
+    /**
+     * data treat result
+     */
     private ResultItems resultItems = new ResultItems();
 
     private Html html;

@@ -2,6 +2,7 @@ package us.codecraft.webmagic.selector;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -125,6 +126,14 @@ public class HtmlNode extends AbstractSelectable {
             selectables.add(new HtmlNode(childElements));
         }
         return selectables;
+    }
+
+    @Override
+    public Elements getAllElements() {
+        if (elements == null) {
+            return new Elements();
+        }
+        return new Elements(elements);
     }
 
     @Override
