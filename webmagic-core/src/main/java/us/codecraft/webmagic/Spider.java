@@ -444,7 +444,7 @@ public class Spider implements Runnable, Task {
             if (cycleTriedTimes < site.getCycleRetryTimes()) {
                 addRequest(SerializationUtils.clone(request).setPriority(0).putExtra(Request.CYCLE_TRIED_TIMES, cycleTriedTimes));
             } else {
-                logger.error("(IMPORT)URL:{} retry download {} still failed!", request.getUrl(), site.getCycleRetryTimes(),);
+                logger.error("(IMPORT)URL:{} retry download {} still failed!", request.getUrl(), site.getCycleRetryTimes());
             }
         }
         sleep(site.getRetrySleepTime());
